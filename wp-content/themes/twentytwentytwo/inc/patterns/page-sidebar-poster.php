@@ -1,24 +1,65 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\page-sidebar-poster.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\page-sidebar-poster.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0002</td>
-<td bgcolor="#eeeeec" align="right">359880</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\page-sidebar-poster.php" bgcolor="#eeeeec">...\page-sidebar-poster.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Poster with right sidebar block pattern
+ */
+return array(
+	'title'      => __( 'Poster with right sidebar', 'twentytwentytwo' ),
+	'categories' => array( 'pages' ),
+	'content'    => '<!-- wp:group {"align":"full","layout":{"inherit":true}} -->
+					<div class="wp-block-group alignfull"><!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"5%"}}} -->
+					<div class="wp-block-columns alignwide"><!-- wp:column {"width":"70%"} -->
+					<div class="wp-block-column" style="flex-basis:70%">
+
+					<!-- wp:heading {"level":1,"align":"wide","style":{"typography":{"fontSize":"clamp(3rem, 6vw, 4.5rem)"},"spacing":{"margin":{"bottom":"0px"}}}} -->
+				<h1 class="alignwide" style="font-size:clamp(3rem, 6vw, 4.5rem);margin-bottom:0px">' . wp_kses_post( __( '<em>Flutter</em>, a collection of bird-related ephemera', 'twentytwentytwo' ) ) . '</h1>
+					<!-- /wp:heading --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"width":""} -->
+					<div class="wp-block-column"></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+
+					<!-- wp:columns {"align":"wide","style":{"spacing":{"blockGap":"5%"}}} -->
+					<div class="wp-block-columns alignwide"><!-- wp:column {"width":"70%","style":{"spacing":{"padding":{"bottom":"32px"}}}} -->
+					<div class="wp-block-column" style="padding-bottom:32px;flex-basis:70%"><!-- wp:image {"width":984,"height":1426,"sizeSlug":"full","linkDestination":"none"} -->
+					<figure class="wp-block-image size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/bird-on-salmon.jpg" alt="' . esc_attr__( 'Image of a bird on a branch', 'twentytwentytwo' ) . '" width="984" height="1426"/></figure>
+					<!-- /wp:image --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"width":""} -->
+					<div class="wp-block-column"><!-- wp:image {"width":100,"height":47,"sizeSlug":"full","linkDestination":"none"} -->
+					<figure class="wp-block-image size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/icon-binoculars.png" alt="' . esc_attr__( 'An icon representing binoculars.', 'twentytwentytwo' ) . '" width="100" height="47"/></figure>
+					<!-- /wp:image -->
+
+					<!-- wp:spacer {"height":16} -->
+					<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:heading {"level":3,"fontSize":"large"} -->
+					<h3 class="has-large-font-size"><em>' . esc_html__( 'Date', 'twentytwentytwo' ) . '</em></h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . esc_html__( 'February, 12 2021', 'twentytwentytwo' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:spacer {"height":16} -->
+					<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:heading {"level":3,"fontSize":"large"} -->
+					<h3 class="has-large-font-size"><em>' . esc_html__( 'Location', 'twentytwentytwo' ) . '</em></h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . wp_kses_post( __( 'The Grand Theater<br>154 Eastern Avenue<br>Maryland NY, 12345', 'twentytwentytwo' ) ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:spacer {"height":16} -->
+					<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns --></div>
+					<!-- /wp:group -->',
+);

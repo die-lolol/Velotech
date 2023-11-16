@@ -1,0 +1,75 @@
+/*
+Theme Name: Signify Tune
+Description: Used to style Gutenberg Blocks in the editor for Signify Tune scheme.
+*/
+
+/* Editor Font Size */
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	font-family: "Poppins", sans-serif;
+}
+
+.editor-post-title__block .editor-post-title__input {
+	font-family: "Poppins", sans-serif;
+}
+
+.wp-block-file .wp-block-file__button {
+	background: #db4f3d;
+}
+
+.is-style-outline .wp-block-button__link,
+.is-style-outline .more-link,
+.is-style-outline .button {
+	border: 1px dashed #db4f3d;
+	background-color: transparent;
+	color: #000;
+}
+
+.is-style-fill.wp-block-button .wp-block-button__link,
+.is-style-fill.wp-block-button .more-link,
+.is-style-fill.wp-block-button .button {
+	background-color: #db4f3d;
+	color: #fff;
+}
+
+.is-style-fill.wp-block-button .wp-block-button__link:hover,
+.is-style-fill.wp-block-button .wp-block-button__link:focus,
+.is-style-fill.wp-block-button .more-link:hover,
+.is-style-fill.wp-block-button .more-link:focus,
+.is-style-fill.wp-block-button .button:hover,
+.is-style-fill.wp-block-button .button:focus,
+.is-style-outline .wp-block-button__link:hover,
+.is-style-outline .wp-block-button__link:focus {
+	background-color: #fff;
+	border-color: #e6e6e6;
+	color: #000;
+}
+
+.wp-block-button .wp-block-button__link:hover,
+.wp-block-button .wp-block-button__link:focus,
+.is-style-outline .wp-block-button__link:hover,
+.is-style-outline .wp-block-button__link:focus {
+	background-color: #fc7684;
+	color: #fff;
+}
+
+.more-link,
+.button,
+.wp-block-button__link {
+    border: 1px solid #db4f3d;
+}
+
+.wp-playlist-tracks .wp-playlist-playing a,
+.wp-playlist-tracks .wp-playlist-playing .wp-playlist-item-length {
+	color: #db4f3d;
+}
+
+.wp-playlist-tracks .wp-playlist-playing a,
+.wp-playlist-tracks .wp-playlist-playing .wp-playlist-item-length {
+	color: #db4f3d;
+}

@@ -1,24 +1,65 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function add_action() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\functions.php on line <i>33</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function add_action() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\functions.php on line <i>33</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0001</td>
-<td bgcolor="#eeeeec" align="right">359616</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\functions.php" bgcolor="#eeeeec">...\functions.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Twenty Twenty-Two functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_Two
+ * @since Twenty Twenty-Two 1.0
+ */
+
+
+if ( ! function_exists( 'twentytwentytwo_support' ) ) :
+
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 *
+	 * @since Twenty Twenty-Two 1.0
+	 *
+	 * @return void
+	 */
+	function twentytwentytwo_support() {
+
+		// Add support for block styles.
+		add_theme_support( 'wp-block-styles' );
+
+		// Enqueue editor styles.
+		add_editor_style( 'style.css' );
+	}
+
+endif;
+
+add_action( 'after_setup_theme', 'twentytwentytwo_support' );
+
+if ( ! function_exists( 'twentytwentytwo_styles' ) ) :
+
+	/**
+	 * Enqueue styles.
+	 *
+	 * @since Twenty Twenty-Two 1.0
+	 *
+	 * @return void
+	 */
+	function twentytwentytwo_styles() {
+		// Register theme stylesheet.
+		$theme_version = wp_get_theme()->get( 'Version' );
+
+		$version_string = is_string( $theme_version ) ? $theme_version : false;
+		wp_register_style(
+			'twentytwentytwo-style',
+			get_template_directory_uri() . '/style.css',
+			array(),
+			$version_string
+		);
+
+		// Enqueue theme stylesheet.
+		wp_enqueue_style( 'twentytwentytwo-style' );
+	}
+
+endif;
+
+add_action( 'wp_enqueue_scripts', 'twentytwentytwo_styles' );
+
+// Add block patterns
+require get_template_directory() . '/inc/block-patterns.php';

@@ -1,24 +1,26 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\query-large-titles.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\query-large-titles.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0001</td>
-<td bgcolor="#eeeeec" align="right">359776</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\query-large-titles.php" bgcolor="#eeeeec">...\query-large-titles.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Large post titles block pattern
+ */
+return array(
+	'title'      => __( 'Large post titles', 'twentytwentytwo' ),
+	'categories' => array( 'query' ),
+	'blockTypes' => array( 'core/query' ),
+	'content'    => '<!-- wp:query {"query":{"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"perPage":8},"align":"wide"} -->
+					<div class="wp-block-query alignwide"><!-- wp:post-template -->
+					<!-- wp:columns -->
+					<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"top","width":"4em"} -->
+					<div class="wp-block-column is-vertically-aligned-top" style="flex-basis:4em"><!-- wp:post-date {"format":"M j","fontSize":"small"} /--></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"center","width":""} -->
+					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"top":"0px","bottom":"0px"}},"typography":{"fontSize":"clamp(2.75rem, 6vw, 3.25rem)"}}} /--></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->
+
+					<!-- wp:separator {"className":"is-style-wide"} -->
+					<hr class="wp-block-separator is-style-wide"/>
+					<!-- /wp:separator -->
+					<!-- /wp:post-template --></div>
+					<!-- /wp:query -->',
+);

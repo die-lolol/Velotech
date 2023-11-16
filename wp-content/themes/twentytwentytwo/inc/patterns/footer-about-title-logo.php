@@ -1,24 +1,32 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\footer-about-title-logo.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\footer-about-title-logo.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0002</td>
-<td bgcolor="#eeeeec" align="right">359848</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\footer-about-title-logo.php" bgcolor="#eeeeec">...\footer-about-title-logo.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Footer with text, title, and logo
+ */
+return array(
+	'title'      => __( 'Footer with text, title, and logo', 'twentytwentytwo' ),
+	'categories' => array( 'footer' ),
+	'blockTypes' => array( 'core/template-part/footer' ),
+	'content'    => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var(--wp--custom--spacing--large, 8rem)","bottom":"6rem"}}},"backgroundColor":"secondary","layout":{"inherit":true}} -->
+					<div class="wp-block-group alignfull has-secondary-background-color has-background" style="padding-top:var(--wp--custom--spacing--large, 8rem);padding-bottom:6rem"><!-- wp:columns {"align":"wide"} -->
+					<div class="wp-block-columns alignwide"><!-- wp:column {"width":"33%"} -->
+					<div class="wp-block-column" style="flex-basis:33%"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}}} -->
+					<p style="text-transform:uppercase">' . esc_html__( 'About us', 'twentytwentytwo' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:paragraph {"style":{"fontSize":"small"} -->
+					<p class="has-small-font-size">' . esc_html__( 'We are a rogue collective of bird watchers. We’ve been known to sneak through fences, climb perimeter walls, and generally trespass in order to observe the rarest of birds.', 'twentytwentytwo' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:spacer {"height":180} -->
+					<div style="height:180px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+
+					<!-- wp:site-title {"level":0} /--></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"bottom"} -->
+					<div class="wp-block-column is-vertically-aligned-bottom"><!-- wp:site-logo {"align":"right","width":60} /--></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns --></div>
+					<!-- /wp:group -->',
+);

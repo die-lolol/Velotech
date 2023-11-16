@@ -1,24 +1,21 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\hidden-heading-and-bird.php on line <i>10</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\hidden-heading-and-bird.php on line <i>10</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0002</td>
-<td bgcolor="#eeeeec" align="right">359872</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\hidden-heading-and-bird.php" bgcolor="#eeeeec">...\hidden-heading-and-bird.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Heading and bird image
+ *
+ * This pattern is used only for translation
+ * and to reference a dynamic image URL. It does
+ * not appear in the inserter.
+ */
+return array(
+	'title'    => __( 'Heading and bird image', 'twentytwentytwo' ),
+	'inserter' => false,
+	'content'  => '<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"0px","bottom":"0px"}}},"layout":{"inherit":true}} -->
+					<div class="wp-block-group alignfull" style="padding-top:0px;padding-bottom:0px;"><!-- wp:heading {"align":"wide","style":{"typography":{"fontSize":"var(--wp--custom--typography--font-size--colossal, clamp(3.25rem, 8vw, 6.25rem))","lineHeight":"1.15"}}} -->
+					<h2 class="alignwide" style="font-size:var(--wp--custom--typography--font-size--colossal, clamp(3.25rem, 8vw, 6.25rem));line-height:1.15">' . wp_kses_post( __( '<em>The Hatchery</em>: a blog about my adventures in bird watching', 'twentytwentytwo' ) ) . '</h2>
+					<!-- /wp:heading --></div>
+					<!-- /wp:group -->
+
+					<!-- wp:image {"align":"full","width":2400,"height":1020,"sizeSlug":"full","linkDestination":"none"} -->
+					<figure class="wp-block-image alignfull size-full is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/flight-path-on-transparent-c.png" alt="' . esc_attr__( 'Illustration of a bird flying.', 'twentytwentytwo' ) . '" width="2400" height="1020"/></figure>
+					<!-- /wp:image -->',
+);

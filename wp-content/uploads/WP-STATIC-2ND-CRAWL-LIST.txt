@@ -1,0 +1,13 @@
+/wp-admin/
+/wp-content/fonts/209e01ade85317ee89bee257850f1537.css
+/wp-content/themes/signify-tune/assets/css/child-blocks.css
+/wp-content/themes/signify-tune/style.css
+/wp-content/themes/signify/css/blocks.css
+/wp-content/themes/signify/css/font-awesome/css/font-awesome.css
+/wp-content/themes/signify/js/functions.min.js
+/wp-content/themes/signify/js/skip-link-focus-fix.min.js
+/wp-content/themes/signify/style.css
+/wp-content/uploads/2023/11/cropped-Screenshot-2023-11-16-162443-1.png
+/wp-includes/css/dist/block-library/style.min.css
+/wp-includes/js/jquery/jquery-migrate.min.js
+/wp-includes/js/jquery/jquery.min.js

@@ -1,3 +1,12 @@
+<?php
+/**
+ * Title: Portfolio archive template
+ * Slug: twentytwentyfour/template-archive-portfolio
+ * Template Types: archive
+ * Viewport width: 1400
+ * Inserter: no
+ */
+?>
 
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
 

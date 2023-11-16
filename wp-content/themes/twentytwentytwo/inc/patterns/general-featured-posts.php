@@ -1,24 +1,25 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-featured-posts.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-featured-posts.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0002</td>
-<td bgcolor="#eeeeec" align="right">359848</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-featured-posts.php" bgcolor="#eeeeec">...\general-featured-posts.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Featured posts block pattern
+ */
+return array(
+	'title'      => __( 'Featured posts', 'twentytwentytwo' ),
+	'categories' => array( 'featured', 'query' ),
+	'content'    => '<!-- wp:group {"align":"wide","layout":{"inherit":false}} -->
+					<div class="wp-block-group alignwide"><!-- wp:paragraph {"style":{"typography":{"textTransform":"uppercase"}}} -->
+					<p style="text-transform:uppercase">' . esc_html__( 'Latest posts', 'twentytwentytwo' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false},"displayLayout":{"type":"flex","columns":3}} -->
+					<div class="wp-block-query"><!-- wp:post-template -->
+					<!-- wp:post-featured-image {"isLink":true,"width":"","height":"310px"} /-->
+
+					<!-- wp:post-title {"isLink":true,"fontSize":"large"} /-->
+
+					<!-- wp:post-excerpt /-->
+
+					<!-- wp:post-date {"fontSize":"small"} /-->
+					<!-- /wp:post-template --></div>
+					<!-- /wp:query --></div>
+					<!-- /wp:group -->',
+);

@@ -1,24 +1,27 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-subscribe.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-subscribe.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0003</td>
-<td bgcolor="#eeeeec" align="right">359792</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-subscribe.php" bgcolor="#eeeeec">...\general-subscribe.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Subscribe callout block pattern
+ */
+return array(
+	'title'      => __( 'Subscribe callout', 'twentytwentytwo' ),
+	'categories' => array( 'featured', 'buttons' ),
+	'content'    => '<!-- wp:columns {"verticalAlignment":"center","align":"wide"} -->
+					<div class="wp-block-columns alignwide are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center"} -->
+					<div class="wp-block-column is-vertically-aligned-center"><!-- wp:heading -->
+					<h2>' . wp_kses_post( __( 'Watch birds<br>from your inbox', 'twentytwentytwo' ) ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:buttons -->
+					<div class="wp-block-buttons"><!-- wp:button {"fontSize":"medium"} -->
+					<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link">' . esc_html__( 'Join our mailing list', 'twentytwentytwo' ) . '</a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column {"verticalAlignment":"center","style":{"spacing":{"padding":{"top":"2rem","bottom":"2rem"}}}} -->
+					<div class="wp-block-column is-vertically-aligned-center" style="padding-top:2rem;padding-bottom:2rem"><!-- wp:separator {"color":"primary","className":"is-style-wide"} -->
+					<hr class="wp-block-separator has-text-color has-background has-primary-background-color has-primary-color is-style-wide"/>
+					<!-- /wp:separator --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->',
+);

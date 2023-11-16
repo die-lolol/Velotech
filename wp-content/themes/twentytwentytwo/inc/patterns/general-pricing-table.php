@@ -1,24 +1,93 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-pricing-table.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-pricing-table.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0003</td>
-<td bgcolor="#eeeeec" align="right">359864</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-pricing-table.php" bgcolor="#eeeeec">...\general-pricing-table.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Pricing table block pattern
+ */
+return array(
+	'title'      => __( 'Pricing table', 'twentytwentytwo' ),
+	'categories' => array( 'featured', 'columns', 'buttons' ),
+	'content'    => '<!-- wp:columns {"align":"wide"} -->
+					<div class="wp-block-columns alignwide"><!-- wp:column -->
+					<div class="wp-block-column"><!-- wp:separator {"className":"is-style-wide"} -->
+					<hr class="wp-block-separator is-style-wide"/>
+					<!-- /wp:separator -->
+
+					<!-- wp:heading {"style":{"typography":{"fontSize":"var(--wp--custom--typography--font-size--gigantic, clamp(2.75rem, 6vw, 3.25rem))","lineHeight":"0.5"}}} -->
+					<h2 id="1" style="font-size:var(--wp--custom--typography--font-size--gigantic, clamp(2.75rem, 6vw, 3.25rem));line-height:0.5">' . esc_html( _x( '1', 'First item in a numbered list.', 'twentytwentytwo' ) ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
+					<h3 class="has-x-large-font-size" id="pigeon"><em>' . esc_html__( 'Pigeon', 'twentytwentytwo' ) . '</em></h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . esc_html__( 'Help support our growing community by joining at the Pigeon level. Your support will help pay our writers, and you’ll get access to our exclusive newsletter.', 'twentytwentytwo' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:buttons -->
+					<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"foreground","width":100} -->
+					<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-foreground-background-color has-background">' . esc_html__( '$25', 'twentytwentytwo' ) . '</a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons -->
+
+					<!-- wp:spacer {"height":16} -->
+					<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column -->
+					<div class="wp-block-column"><!-- wp:separator {"className":"is-style-wide"} -->
+					<hr class="wp-block-separator is-style-wide"/>
+					<!-- /wp:separator -->
+
+					<!-- wp:heading {"style":{"typography":{"fontSize":"clamp(2.75rem, 6vw, 3.25rem)","lineHeight":"0.5"}}} -->
+					<h2 id="2" style="font-size:clamp(2.75rem, 6vw, 3.25rem);line-height:0.5">' . esc_html( _x( '2', 'Second item in a numbered list.', 'twentytwentytwo' ) ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
+					<h3 class="has-x-large-font-size" id="sparrow"><meta charset="utf-8"><em>' . esc_html__( 'Sparrow', 'twentytwentytwo' ) . '</em></h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . esc_html__( 'Join at the Sparrow level and become a member of our flock! You’ll receive our newsletter, plus a bird pin that you can wear with pride when you’re out in nature.', 'twentytwentytwo' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:buttons -->
+					<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"foreground","width":100} -->
+					<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-foreground-background-color has-background">' . esc_html__( '$75', 'twentytwentytwo' ) . '</a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons -->
+
+					<!-- wp:spacer {"height":16} -->
+					<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer --></div>
+					<!-- /wp:column -->
+
+					<!-- wp:column -->
+					<div class="wp-block-column"><!-- wp:separator {"className":"is-style-wide"} -->
+					<hr class="wp-block-separator is-style-wide"/>
+					<!-- /wp:separator -->
+
+					<!-- wp:heading {"style":{"typography":{"fontSize":"clamp(2.75rem, 6vw, 3.25rem)","lineHeight":"0.5"}}} -->
+					<h2 id="3" style="font-size:clamp(2.75rem, 6vw, 3.25rem);line-height:0.5">' . esc_html( _x( '3', 'Third item in a numbered list.', 'twentytwentytwo' ) ) . '</h2>
+					<!-- /wp:heading -->
+
+					<!-- wp:heading {"level":3,"fontSize":"x-large"} -->
+					<h3 class="has-x-large-font-size" id="falcon"><meta charset="utf-8"><em>' . esc_html__( 'Falcon', 'twentytwentytwo' ) . '</em></h3>
+					<!-- /wp:heading -->
+
+					<!-- wp:paragraph -->
+					<p>' . esc_html__( 'Play a leading role for our community by joining at the Falcon level. This level earns you a seat on our board, where you can help plan future birdwatching expeditions.', 'twentytwentytwo' ) . '</p>
+					<!-- /wp:paragraph -->
+
+					<!-- wp:buttons -->
+					<div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"foreground","width":100} -->
+					<div class="wp-block-button has-custom-width wp-block-button__width-100"><a class="wp-block-button__link has-foreground-background-color has-background">' . esc_html__( '$150', 'twentytwentytwo' ) . '</a></div>
+					<!-- /wp:button --></div>
+					<!-- /wp:buttons -->
+
+					<!-- wp:spacer {"height":16} -->
+					<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer --></div>
+					<!-- /wp:column --></div>
+					<!-- /wp:columns -->',
+);

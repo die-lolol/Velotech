@@ -1,24 +1,38 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\query-simple-blog.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\query-simple-blog.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0001</td>
-<td bgcolor="#eeeeec" align="right">359776</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\query-simple-blog.php" bgcolor="#eeeeec">...\query-simple-blog.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Simple blog posts block pattern
+ */
+return array(
+	'title'      => __( 'Simple blog posts', 'twentytwentytwo' ),
+	'categories' => array( 'query' ),
+	'blockTypes' => array( 'core/query' ),
+	'content'    => '<!-- wp:query {"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","categoryIds":[],"tagIds":[],"order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true,"perPage":10},"layout":{"inherit":true}} -->
+					<div class="wp-block-query"><!-- wp:post-template -->
+					<!-- wp:post-title {"isLink":true,"style":{"spacing":{"margin":{"top":"1rem","bottom":"1rem"}},"typography":{"fontStyle":"normal","fontWeight":"300"},"elements":{"link":{"color":{"text":"var:preset|color|primary"}}}},"textColor":"primary","fontSize":"var(--wp--custom--typography--font-size--huge, clamp(2.25rem, 4vw, 2.75rem))"} /-->
+
+					<!-- wp:post-featured-image {"isLink":true} /-->
+
+					<!-- wp:post-excerpt /-->
+
+					<!-- wp:group {"layout":{"type":"flex"}} -->
+					<div class="wp-block-group"><!-- wp:post-date {"format":"F j, Y","style":{"typography":{"fontStyle":"normal","fontWeight":"400"}},"fontSize":"small"} /-->
+
+					<!-- wp:post-terms {"term":"category","fontSize":"small"} /-->
+
+					<!-- wp:post-terms {"term":"post_tag","fontSize":"small"} /--></div>
+					<!-- /wp:group -->
+
+					<!-- wp:spacer {"height":128} -->
+					<div style="height:128px" aria-hidden="true" class="wp-block-spacer"></div>
+					<!-- /wp:spacer -->
+					<!-- /wp:post-template -->
+
+					<!-- wp:query-pagination {"paginationArrow":"arrow","align":"wide","layout":{"type":"flex","justifyContent":"space-between"}} -->
+					<!-- wp:query-pagination-previous {"fontSize":"small"} /-->
+
+					<!-- wp:query-pagination-numbers /-->
+
+					<!-- wp:query-pagination-next {"fontSize":"small"} /-->
+					<!-- /wp:query-pagination --></div>
+					<!-- /wp:query -->',
+);

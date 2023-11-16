@@ -1,3 +1,11 @@
+<?php
+/**
+ * Title: Services call to action with image on left
+ * Slug: twentytwentyfour/cta-services-image-left
+ * Categories: call-to-action, banner, featured, services
+ * Viewport width: 1400
+ */
+?>
 
 <!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|50","bottom":"var:preset|spacing|50","left":"var:preset|spacing|50","right":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"accent-5","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull has-accent-5-background-color has-background" style="margin-top:0;margin-bottom:0;padding-top:var(--wp--preset--spacing--50);padding-right:var(--wp--preset--spacing--50);padding-bottom:var(--wp--preset--spacing--50);padding-left:var(--wp--preset--spacing--50)">
@@ -7,27 +15,34 @@
 		<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:60%">
 			<!-- wp:image {"aspectRatio":"4/3","scale":"cover","sizeSlug":"full","linkDestination":"none","style":{"color":{"duotone":"var:preset|duotone|duotone-1"}},"className":"is-style-rounded"} -->
 			<figure class="wp-block-image size-full is-style-rounded">
-				<img src="/https://die-lolol_github_io/Velotech//wp-content/themes/twentytwentyfour/patterns/<br_/>_<font_size=%271%27%3E%3Ctable+class%3D%27xdebug-error+xe-uncaught-exception%27+dir%3D%27ltr%27+border%3D%271%27+cellspacing%3D%270%27+cellpadding%3D%271%27%3E_%3Ctr%3E%3Cth+align%3D%27left%27+bgcolor%3D%27#f57900' colspan="><span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function esc_url() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentyfour\patterns\cta-services-image-left.php on line <i>18</i>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function esc_url() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentyfour\patterns\cta-services-image-left.php on line <i>18</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0000</td>
-<td bgcolor="#eeeeec" align="right">359896</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentyfour\patterns\cta-services-image-left.php" bgcolor="#eeeeec">...\cta-services-image-left.php<b>:</b>0</td>
-</tr>
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/abstract-geometric-art.webp" alt="<?php esc_attr_e( 'White abstract geometric artwork from Dresden, Germany', 'twentytwentyfour' ); ?>" style="aspect-ratio:4/3;object-fit:cover" />
+			</figure>
+			<!-- /wp:image -->
+		</div>
+		<!-- /wp:column -->
 
-</figure>
+		<!-- wp:column {"width":"40%"} -->
+		<div class="wp-block-column" style="flex-basis:40%">
+			<!-- wp:heading -->
+			<h2 class="wp-block-heading"><?php echo esc_html_x( 'Guiding your business through the project', 'Sample heading of the services pattern', 'twentytwentyfour' ); ?></h2>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph -->
+			<p><?php echo esc_html_x( 'Experience the fusion of imagination and expertise with Études—the catalyst for architectural transformations that enrich the world around us.', 'Sample description of the services pattern', 'twentytwentyfour' ); ?></p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:buttons -->
+			<div class="wp-block-buttons">
+				<!-- wp:button -->
+				<div class="wp-block-button">
+					<a class="wp-block-button__link wp-element-button"><?php echo esc_html_x( 'Our services', 'Sample button text to view the services', 'twentytwentyfour' ); ?></a>
+				</div>
+				<!-- /wp:button -->
+			</div>
+			<!-- /wp:buttons -->
+		</div>
+		<!-- /wp:column -->
+	</div>
+	<!-- /wp:columns -->
 </div>
-</div>
-</div>
+<!-- /wp:group -->

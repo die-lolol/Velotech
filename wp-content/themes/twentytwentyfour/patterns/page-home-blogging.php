@@ -1,3 +1,13 @@
+<?php
+/**
+ * Title: Blogging home
+ * Slug: twentytwentyfour/page-home-blogging
+ * Categories: page
+ * Keywords: page, starter
+ * Post Types: page, wp_template
+ * Viewport width: 1400
+ */
+?>
 
 <!-- wp:pattern {"slug":"twentytwentyfour/text-centered-statement-small"}	/-->
 

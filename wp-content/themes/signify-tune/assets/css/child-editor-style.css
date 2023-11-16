@@ -1,0 +1,184 @@
+/*
+Theme Name: Signify Tune
+Description: Used to style the TinyMCE editor  for Signify Tune scheme.
+*/
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Body
+ * 2.0 - Typography
+ * 3.0 - Elements
+ * 4.0 - Padding/Margin
+ * 5.0 - Forms
+ * 6.0 - Navigation
+ *   6.1 - Links
+ * 7.0 - Alignments
+ * 8.0 - Posts and pages
+ * 9.0 - Media
+ * 10.0 - Captions
+ * 11.0 - Galleries
+ * 12.0 - Media Queries
+ *    12.1 - >= 1024px
+ *	  12.2 - >= 1200px
+ *	  12.3 - >= 1366px
+ *	  12.4 - >= 1600px
+ * 14.0 - RTL
+ * 15.0 - Colors
+ */
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Poppins", sans-serif;
+}
+
+.more-link,
+.button,
+.wp-block-button__link {
+    background-color: #db4f3d;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+}
+
+.is-style-outline .wp-block-button__link,
+.is-style-outline .more-link,
+.is-style-outline .button {
+    border: 1px dashed #db4f3d;
+    background-color: transparent;
+    color: #000;
+}
+
+.is-style-outline .wp-block-button__link:hover,
+.is-style-outline .wp-block-button__link:focus {
+    border-color: #e6e6e6;
+    color: #db4f3d;
+}
+
+.is-style-fill.wp-block-button .wp-block-button__link,
+.is-style-fill.wp-block-button .more-link,
+.is-style-fill.wp-block-button .button {
+    background-color: #db4f3d;
+    color: #fff;
+}
+
+.is-style-fill.wp-block-button .wp-block-button__link:hover,
+.is-style-fill.wp-block-button .wp-block-button__link:focus,
+.is-style-fill.wp-block-button .more-link:hover,
+.is-style-fill.wp-block-button .more-link:focus,
+.is-style-fill.wp-block-button .button:hover,
+.is-style-fill.wp-block-button .button:focus {
+    background-color: #fff;
+    border-color: #e6e6e6;
+    color: #000;
+}
+
+
+/**
+ * 15.0 - Colors
+ */
+
+/* Link Color */
+a,
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="datetime-local"]:focus,
+input[type="week"]:focus,
+input[type="month"]:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+body .wp-playlist-item:hover,
+body .wp-playlist-item:focus,
+body .wp-playlist-item:hover .wp-playlist-item-artist,
+body .wp-playlist-item:focus .wp-playlist-item-artist,
+body .wp-playlist-item:hover .wp-playlist-caption,
+body .wp-playlist-item:focus .wp-playlist-caption {
+    color: #000000;
+}
+
+/* Link Hover Color */
+a:focus,
+a:hover,
+.mejs-container button:hover,
+.mejs-container button:focus {
+    color: #db4f3d;
+}
+
+/* Secondary Link Color */
+body .wp-playlist,
+ins,
+body .wp-playlist .wp-playlist-caption{
+    color: #959595;
+}
+
+/* Button Text Color */
+mark,
+.page-links a,
+.button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    color: #ffffff;
+}
+
+/* Button Hover Text Color */
+.page-links a:hover,
+.page-links a:focus,
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus,
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    color: #db4f3d;
+}
+
+/* Button Background Color */
+.page-links a,
+.button,
+input[type="button"],
+input[type="button"][disabled]:hover,
+input[type="button"][disabled]:focus,
+input[type="reset"],
+input[type="reset"][disabled]:hover,
+input[type="reset"][disabled]:focus,
+input[type="submit"],
+input[type="submit"][disabled]:hover,
+input[type="submit"][disabled]:focus {
+    background-color: #db4f3d;
+}
+
+/* Button Hover Background Color */
+.page-links a:hover,
+.page-links a:focus,
+.button:hover,
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: #333;
+}

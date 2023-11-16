@@ -1,3 +1,14 @@
+<?php
+/**
+ * Title: Portfolio project overview
+ * Slug: twentytwentyfour/page-portfolio-overview
+ * Categories: page, featured
+ * Keywords: starter
+ * Block Types: core/post-content
+ * Post Types: page, wp_template
+ * Viewport width: 1400
+ */
+?>
 
 <!-- wp:pattern {"slug":"twentytwentyfour/banner-project-description"} /-->
 <!-- wp:pattern {"slug":"twentytwentyfour/text-project-details"} /-->

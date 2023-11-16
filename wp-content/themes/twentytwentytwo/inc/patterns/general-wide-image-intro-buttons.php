@@ -1,24 +1,41 @@
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-wide-image-intro-buttons.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function __() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-wide-image-intro-buttons.php on line <i>6</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0003</td>
-<td bgcolor="#eeeeec" align="right">360008</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentytwo\inc\patterns\general-wide-image-intro-buttons.php" bgcolor="#eeeeec">...\general-wide-image-intro-buttons.php<b>:</b>0</td>
-</tr>
-</table></font>
+<?php
+/**
+ * Wide image with introduction and buttons block pattern
+ */
+return array(
+	'title'      => __( 'Wide image with introduction and buttons', 'twentytwentytwo' ),
+	'categories' => array( 'featured', 'columns' ),
+	'content'    => '<!-- wp:group {"align":"wide"} -->
+				<div class="wp-block-group alignwide"><!-- wp:image {"width":2100,"height":994,"sizeSlug":"large"} -->
+				<figure class="wp-block-image size-large is-resized"><img src="' . esc_url( get_template_directory_uri() ) . '/assets/images/flight-path-on-gray-a.jpg" alt="' . esc_attr__( 'Illustration of a bird flying.', 'twentytwentytwo' ) . '" width="2100" height="994"/></figure>
+				<!-- /wp:image -->
+
+				<!-- wp:columns {"verticalAlignment":null} -->
+				<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"bottom"} -->
+				<div class="wp-block-column is-vertically-aligned-bottom"><!-- wp:heading {"style":{"typography":{"fontSize":"clamp(3.25rem, 8vw, 6.25rem)","lineHeight":"1.15"}}} -->
+				<h2 style="font-size:clamp(3.25rem, 8vw, 6.25rem);line-height:1.15"><em>' . wp_kses_post( __( 'Welcome to<br>the Aviary', 'twentytwentytwo' ) ) . '</em></h2>
+				<!-- /wp:heading --></div>
+				<!-- /wp:column -->
+
+				<!-- wp:column {"verticalAlignment":"bottom","style":{"spacing":{"padding":{"bottom":"6rem"}}}} -->
+				<div class="wp-block-column is-vertically-aligned-bottom" style="padding-bottom:6rem"><!-- wp:paragraph -->
+				<p>' . esc_html__( 'A film about hobbyist bird watchers, a catalog of different birds, paired with the noises they make. Each bird is listed by their scientific name so things seem more official.', 'twentytwentytwo' ) . '</p>
+				<!-- /wp:paragraph -->
+
+				<!-- wp:spacer {"height":20} -->
+				<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+				<!-- /wp:spacer -->
+
+				<!-- wp:buttons -->
+				<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-outline"} -->
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link">' . esc_html__( 'Learn More', 'twentytwentytwo' ) . '</a></div>
+				<!-- /wp:button -->
+
+				<!-- wp:button {"className":"is-style-outline"} -->
+				<div class="wp-block-button is-style-outline"><a class="wp-block-button__link">' . esc_html__( 'Buy Tickets', 'twentytwentytwo' ) . '</a></div>
+				<!-- /wp:button --></div>
+				<!-- /wp:buttons --></div>
+				<!-- /wp:column --></div>
+				<!-- /wp:columns --></div>
+				<!-- /wp:group -->',
+);

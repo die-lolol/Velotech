@@ -1,3 +1,12 @@
+<?php
+/**
+ * Title: Portfolio single post template
+ * Slug: twentytwentyfour/template-single-portfolio
+ * Template Types: posts, single
+ * Viewport width: 1400
+ * Inserter: no
+ */
+?>
 
 <!-- wp:template-part {"slug":"header","area":"header","tagName":"header"} /-->
 

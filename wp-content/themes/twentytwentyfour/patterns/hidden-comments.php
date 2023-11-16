@@ -1,31 +1,47 @@
+<?php
+/**
+ * Title: Comments
+ * Slug: twentytwentyfour/hidden-comments
+ * Inserter: no
+ */
+?>
 
 <!-- wp:comments {"className":"wp-block-comments-query-loop"} -->
 <div class="wp-block-comments wp-block-comments-query-loop">
 	<!-- wp:heading -->
-	<h2>
-<br>
-<font size="1"><table class="xdebug-error xe-uncaught-exception" dir="ltr" border="1" cellspacing="0" cellpadding="1">
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Fatal error: Uncaught Error: Call to undefined function esc_html_e() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentyfour\patterns\hidden-comments.php on line <i>12</i>
-</th></tr>
-<tr><th align="left" bgcolor="#f57900" colspan="5">
-<span style="background-color: #cc0000; color: #fce94f; font-size: x-large;">( ! )</span> Error: Call to undefined function esc_html_e() in C:\wamp64\www\Velotech\wp-content\themes\twentytwentyfour\patterns\hidden-comments.php on line <i>12</i>
-</th></tr>
-<tr><th align="left" bgcolor="#e9b96e" colspan="5">Call Stack</th></tr>
-<tr>
-<th align="center" bgcolor="#eeeeec">#</th>
-<th align="left" bgcolor="#eeeeec">Time</th>
-<th align="left" bgcolor="#eeeeec">Memory</th>
-<th align="left" bgcolor="#eeeeec">Function</th>
-<th align="left" bgcolor="#eeeeec">Location</th>
-</tr>
-<tr>
-<td bgcolor="#eeeeec" align="center">1</td>
-<td bgcolor="#eeeeec" align="center">0.0001</td>
-<td bgcolor="#eeeeec" align="right">359776</td>
-<td bgcolor="#eeeeec">{main}(  )</td>
-<td title="C:\wamp64\www\Velotech\wp-content\themes\twentytwentyfour\patterns\hidden-comments.php" bgcolor="#eeeeec">...\hidden-comments.php<b>:</b>0</td>
-</tr>
-</table></font>
-</h2>
+	<h2><?php esc_html_e( 'Comments', 'twentytwentyfour' ); ?></h2>
+	<!-- /wp:heading -->
+	<!-- wp:comments-title {"level":3} /-->
+	<!-- wp:comment-template -->
+	<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|30"}}}} -->
+	<div class="wp-block-group" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--30)">
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"},"style":{"spacing":{"blockGap":"0.5em"}}} -->
+		<div class="wp-block-group">
+			<!-- wp:avatar {"size":40} /-->
+			<!-- wp:group -->
+			<div class="wp-block-group">
+				<!-- wp:comment-author-name /-->
+				<!-- wp:comment-date /-->
+			</div>
+			<!-- /wp:group -->
+		</div>
+		<!-- /wp:group -->
+		<!-- wp:comment-content /-->
+		<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
+		<div class="wp-block-group">
+			<!-- wp:comment-edit-link /-->
+			<!-- wp:comment-reply-link /-->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+	<!-- /wp:comment-template -->
+
+	<!-- wp:comments-pagination {"layout":{"type":"flex","justifyContent":"space-between"}} -->
+	<!-- wp:comments-pagination-previous /-->
+	<!-- wp:comments-pagination-next /-->
+	<!-- /wp:comments-pagination -->
+
+	<!-- wp:post-comments-form {"style":{"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"}}}} /-->
 </div>
+<!-- /wp:comments -->

@@ -1,3 +1,11 @@
+<?php
+/**
+ * Title: List of posts, 1 column
+ * Slug: twentytwentyfour/posts-1-col
+ * Categories: query
+ * Block Types: core/query
+ */
+?>
 
 <!-- wp:query {"query":{"perPage":3,"pages":0,"offset":"0","postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"layout":{"type":"constrained"}} -->
 <div class="wp-block-query">

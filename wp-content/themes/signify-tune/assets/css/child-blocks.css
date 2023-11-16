@@ -1,0 +1,20 @@
+/*
+Theme Name: Signify Tune
+Description: Used to style Gutenberg Blocks for Signify Tune scheme.
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 Blocks - General Styles
+2.0 Blocks - Common Blocks
+3.0 Blocks - Formatting
+4.0 Blocks - Layout Elements
+5.0 Blocks - Widgets
+6.0 Blocks - Colors
+--------------------------------------------------------------*/
+
+.is-style-outline.wp-block-button .wp-block-button__link:hover,
+.is-style-outline.wp-block-button .wp-block-button__link:focus {
+	color: #db4f3d;
+}
